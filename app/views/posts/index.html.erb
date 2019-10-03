@@ -1,4 +1,10 @@
+<h1>All Post</h1>
+
+<%= link_to "New Post", new_post_path %>
+
+<%= link_to "Log out", logout_path, method: :delete %>
+
 <% @posts.each do |p| %>
-	<h2><%= p.title%></h2> <br>
-	<%= image_tag(post_path(p.id), :width => 600) %> <br>
+	<h3><%= p.title%></h3> <br>
+	<%= image_tag(post_path(p.id), :width => 300) %> <br>
 <% end %>
